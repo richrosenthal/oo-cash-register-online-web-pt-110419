@@ -14,7 +14,7 @@ class CashRegister
     @item = []
   end 
   
- 
+ binding.pry
   
   def add_item(title, price, quantity = 1)
      
@@ -52,7 +52,7 @@ class CashRegister
 def items
    @item
   end
-  binding.pry
+  
   def void_last_transaction 
     last_transaction_price = PREVIOUS_PRICE.last 
     PREVIOUS_PRICE.pop
