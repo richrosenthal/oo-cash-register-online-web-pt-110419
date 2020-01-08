@@ -67,9 +67,9 @@ def items
      @total = 0.0 
    end 
    
-   if @item == []
-     @total = 0.0 
-  end 
+  # if @item == []
+  #   @total = 0.0 
+  # end 
   
   end 
   
