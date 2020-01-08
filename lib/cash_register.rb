@@ -2,7 +2,7 @@ require 'pry'
 
 class CashRegister
 
-  attr_accessor :total, :discount, :item   
+  attr_accessor :total, :discount, :item, :last_transaction   
   
 
   
@@ -32,6 +32,7 @@ class CashRegister
     else 
       @total += price 
     end 
+    @last_transaction = price * quantity
   end 
   
   
@@ -54,15 +55,15 @@ def items
   end
   
   def void_last_transaction 
-    last_transaction_price = PREVIOUS_PRICE.last 
-    PREVIOUS_PRICE.pop
-    @item.pop 
-    if PREVIOUS_PRICE.last == nil 
-      @total = 0.0 
-    else 
+  #   last_transaction_price = PREVIOUS_PRICE.last 
+  #   PREVIOUS_PRICE.pop
+  #   @item.pop 
+  #   if PREVIOUS_PRICE.last == nil 
+  #     @total = 0.0 
+  #   else 
     
-    @total = @total - last_transaction_price
-   end
+  #   @total = @total - last_transaction_price
+  # end
    
   # if @item.pop == nil 
   #   @total = 0.0 
