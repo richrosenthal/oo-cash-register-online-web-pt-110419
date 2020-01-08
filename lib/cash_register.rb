@@ -59,6 +59,7 @@ def items
     PREVIOUS_PRICE.pop
     @item.pop 
     @total = @total - last_transaction_price
+    binding.pry
     if @item.last == nil
       @total = 0.0 
     end 
