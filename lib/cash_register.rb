@@ -66,7 +66,7 @@ def items
    if @item.pop == nil 
      @total = 0 
    end 
-   
+   binding.pry
   end 
   
 end
