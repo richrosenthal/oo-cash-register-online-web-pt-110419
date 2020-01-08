@@ -55,11 +55,12 @@ def items
   
   def void_last_transaction 
     last_transaction_price = PREVIOUS_PRICE.last 
+    PREVIOUS_PRICE.pop
+    @item.pop 
     if @item.last == nil 
       @total = 0.0 
     else 
-    PREVIOUS_PRICE.pop
-    @item.pop 
+    
     @total = @total - last_transaction_price
    end
    
