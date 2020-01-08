@@ -66,7 +66,11 @@ def items
    if @item.pop == nil 
      @total = 0.0 
    end 
-   binding.pry
+   
+   if @item == []
+     @total = 0.0 
+  end 
+  
   end 
   
 end
