@@ -71,7 +71,7 @@ def items
   # if @item.last == nil
   #   @total = 0.0 
   # end  
-  
+  binding.pry
   end 
   
 end
