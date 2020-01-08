@@ -55,6 +55,8 @@ def items
   end
   
   def void_last_transaction 
+    
+    self.total = self.total - last_transaction
   #   last_transaction_price = PREVIOUS_PRICE.last 
   #   PREVIOUS_PRICE.pop
   #   @item.pop 
@@ -64,6 +66,9 @@ def items
     
   #   @total = @total - last_transaction_price
   # end
+   
+   
+   
    
   # if @item.pop == nil 
   #   @total = 0.0 
